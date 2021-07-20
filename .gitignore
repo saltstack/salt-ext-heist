@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Ignore the setuptools_scm auto-generated version module
+src/saltext/salt_ext_heist/version.py
+
+# Ignore CI generated artifacts
+artifacts/
