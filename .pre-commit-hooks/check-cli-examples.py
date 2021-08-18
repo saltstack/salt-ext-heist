@@ -1,3 +1,5 @@
+# Copyright 2021 VMware, Inc.
+# SPDX-License: Apache-2
 import ast
 import pathlib
 import re

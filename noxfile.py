@@ -1,3 +1,5 @@
+# Copyright 2021 VMware, Inc.
+# SPDX-License: Apache-2
 # pylint: disable=missing-module-docstring,import-error,protected-access,missing-function-docstring
 import datetime
 import json

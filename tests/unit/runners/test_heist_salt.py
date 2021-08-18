@@ -1,3 +1,5 @@
+# Copyright 2021 VMware, Inc.
+# SPDX-License: Apache-2
 """
     Unit tests for the salt.runners.heist_salt module
 """

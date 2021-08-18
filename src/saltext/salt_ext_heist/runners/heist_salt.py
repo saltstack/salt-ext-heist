@@ -1,3 +1,5 @@
+# Copyright 2021 VMware, Inc.
+# SPDX-License: Apache-2
 """
 Heist Salt runner for deploying and managing Salt artifacts
 """
