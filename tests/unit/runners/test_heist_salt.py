@@ -23,19 +23,6 @@ def configure_loader_modules():
     }
 
 
-@pytest.fixture()
-def pop_hub():
-    """
-    Test the hub using the heist project
-    """
-    return heist.create_hub(
-        "heist",
-        subs=["acct", "artifact", "rend", "roster", "service", "tunnel"],
-        sub_dirs=["heist", "service"],
-        confs=["heist", "acct"],
-    )
-
-
 def test_heist_salt_deploy(pop_hub):
     """
     test heist salt deploy runner

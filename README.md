@@ -10,9 +10,13 @@ If you think you've found a security vulnerability, see [Salt's security guide][
 
 ## Contributing
 
-The salt-ext-heist project team welcomes contributions from the community. If you wish to contribute code and you have not signed our contributor license agreement (CLA), our bot will update the issue when you open a Pull Request. For any questions about the CLA process, please refer to our [FAQ](https://cla.vmware.com/faq).
+The salt-ext-heist project team welcomes contributions from the community. If you wish to
+contribute code and you have not signed our contributor license agreement (CLA), our bot
+will update the issue when you open a Pull Request. For any questions about the CLA process,
+please refer to our [FAQ](https://cla.vmware.com/faq).
 
-The [Salt Contributing guide][salt-contributing] has a lot of relevant information, but if you'd like to jump right in here's how to get started:
+The [Salt Contributing guide][salt-contributing] has a lot of relevant information, but if
+you'd like to jump right in here's how to get started:
 
     # Clone the repo
     git clone --origin salt https://github.com/saltstack/salt-ext-heist.git
@@ -27,8 +31,8 @@ The [Salt Contributing guide][salt-contributing] has a lot of relevant informati
     # On mac, you may need to upgrade pip
     python -m pip install --upgrade pip
 
-    # Install extension + test/dev/doc dependencies into your environment
-    python -m pip install -e .[tests,dev,docs]
+    # Install extension + test/doc dependencies into your environment
+    python -m pip install -e . -r requirements/tests.in -r requirements/base.txt -r requirements/docs.in
 
     # Run tests!
     python -m nox -e tests-3

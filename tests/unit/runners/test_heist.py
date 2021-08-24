@@ -18,21 +18,18 @@ pytest.importorskip("heist", reason="Test requires heist to be installed")
 def configure_loader_modules():
     return {
         heist: {"__context__": {}},
-        #        hub: {"__context__": {}},
     }
 
 
 @pytest.fixture()
-def pop_hub():
-    """
-    Test the hub using the heist project
-    """
-    return heist.create_hub(
-        "heist",
-        subs=["acct", "artifact", "rend", "roster", "service", "tunnel"],
-        sub_dirs=["heist", "service"],
-        confs=["heist", "acct"],
-    )
+def patch_common(pop_hub):
+    mock_run = Mock(return_value=True)
+    patch_platform = patch("salt.utils.platform.is_windows", return_value=False)
+    patch_heist_hub = patch.object(heist, "create_hub", return_value=pop_hub)
+    patch_init = patch.object(pop_hub.heist.init, "run_remotes", mock_run)
+    patch_loop = patch.object(pop_hub.pop.loop, "start", return_value=True)
+    with patch_platform, patch_heist_hub, patch_init, patch_loop:
+        yield mock_run
 
 
 @pytest.mark.parametrize("sub", ["config", "heist"])
@@ -50,49 +47,35 @@ def test_confs(conf, pop_hub):
     hasattr(pop_hub.OPT, conf)
 
 
-def test_heist_deploy(pop_hub):
+def test_heist_deploy(patch_common):
     """
     test heist deploy runner
     """
-    mock_run = Mock(return_value=True)
-    patch_platform = patch("salt.utils.platform.is_windows", return_value=False)
-    patch_heist_hub = patch.object(heist, "create_hub", return_value=pop_hub)
-    patch_init = patch.object(pop_hub.heist.init, "run_remotes", mock_run)
-    patch_loop = patch.object(pop_hub.pop.loop, "start", return_value=True)
-
-    with patch_platform, patch_heist_hub, patch_init, patch_loop:
-        heist.deploy("salt.minion", sub="salt")
-        assert mock_run.call_args_list == [
-            call(
-                "salt.minion",
-                artifact_version="",
-                roster=None,
-                roster_data=None,
-                roster_file="",
-            )
-        ]
+    heist.deploy("salt.minion", sub="salt")
+    assert patch_common.call_args_list == [
+        call(
+            "salt.minion",
+            artifact_version="",
+            roster=None,
+            roster_data=None,
+            roster_file="",
+        )
+    ]
 
 
-def test_heist_deploy_args(pop_hub):
+def test_heist_deploy_args(patch_common):
     """
     test heist deploy runner when an
     args (roster_file) is passed.
     """
-    mock_run = Mock(return_value=True)
     roster_file = "/tmp/testrosterfile"
-    patch_platform = patch("salt.utils.platform.is_windows", return_value=False)
-    patch_heist_hub = patch.object(heist, "create_hub", return_value=pop_hub)
-    patch_init = patch.object(pop_hub.heist.init, "run_remotes", mock_run)
-    patch_loop = patch.object(pop_hub.pop.loop, "start", return_value=True)
-
-    with patch_platform, patch_heist_hub, patch_init, patch_loop:
-        heist.deploy("salt.minion", roster_file=roster_file, sub="salt")
-        assert mock_run.call_args_list == [
-            call(
-                "salt.minion",
-                artifact_version="",
-                roster=None,
-                roster_data=None,
-                roster_file=roster_file,
-            )
-        ]
+    heist.deploy("salt.minion", roster_file=roster_file, sub="salt")
+    assert patch_common.call_args_list == [
+        call(
+            "salt.minion",
+            artifact_version="",
+            roster=None,
+            roster_data=None,
+            roster_file=roster_file,
+        )
+    ]
