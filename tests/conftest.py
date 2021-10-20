@@ -20,6 +20,18 @@ def salt_factories_config():
     }
 
 
+@pytest.fixture(autouse=True)
+def set_heist_config(tmp_path):
+    """
+    Create the heist config file.
+    """
+    heist_conf = tmp_path / "heist_config"
+    with open(heist_conf, "w"):
+        pass
+    os.environ["HEIST_CONFIG"] = str(heist_conf)
+    return heist_conf
+
+
 @pytest.fixture(scope="package")
 def master(salt_factories):
     return salt_factories.get_salt_master_daemon(random_string("master-"))
