@@ -1,7 +1,7 @@
 # Salt Extension for Heist
 
-This is a collection of Salt-maintained extension modules for use with Heist
-and Heist-Salt.
+This is a collection of Salt-maintained extension modules for use with [Heist](https://heist.readthedocs.io/en/latest/)
+and [Heist-Salt](https://heist-salt.readthedocs.io/en/latest/).
 
 ## Security
 
