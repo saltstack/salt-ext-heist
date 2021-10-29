@@ -26,8 +26,7 @@ def set_heist_config(tmp_path):
     Create the heist config file.
     """
     heist_conf = tmp_path / "heist_config"
-    with open(heist_conf, "w"):
-        pass
+    heist_conf.touch(exist_ok=True)
     os.environ["HEIST_CONFIG"] = str(heist_conf)
     return heist_conf
 
