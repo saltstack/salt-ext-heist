@@ -58,7 +58,7 @@ def test_heist_deploy(patch_common):
             artifact_version="",
             roster=None,
             roster_data=None,
-            roster_file="",
+            roster_file="/etc/heist/roster",
         )
     ]
 

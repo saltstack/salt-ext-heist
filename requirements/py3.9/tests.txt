@@ -5,11 +5,10 @@
 #    pip-compile -o requirements/py3.9/tests.txt -v requirements/base.txt requirements/tests.in
 #
 acct==6.1.1               # via heist
-aiofiles==0.4.0           # via acct, aiologger
-aiohttp==3.7.4.post0      # via heist
-aiologger[aiofiles]==0.6.1  # via pop-config
+aiofiles==0.4.0           # via acct
+aiohttp==3.7.4.post0      # via heist, heist-salt
 async-timeout==3.0.1      # via aiohttp
-asyncssh==2.7.0           # via heist
+asyncssh==2.7.0           # via heist, heist-salt
 attrs==21.2.0             # via aiohttp, pytest, pytest-salt-factories
 backports.entry-points-selectable==1.1.0  # via virtualenv
 certifi==2021.5.30        # via requests
@@ -24,7 +23,8 @@ dict-toolbox==2           # via acct, pop, pop-config, rend
 distlib==0.3.2            # via virtualenv
 distro==1.5.0             # via salt
 filelock==3.0.12          # via virtualenv
-heist==4.0.0
+heist-salt==5.0.0
+heist==6.0.0
 idna==3.2                 # via requests, yarl
 immutables==0.15          # via contextvars
 iniconfig==1.1.1          # via pytest
@@ -36,7 +36,7 @@ nest-asyncio==1.5.1       # via pop-loop
 packaging==21.0           # via pytest
 platformdirs==2.0.2       # via virtualenv
 pluggy==0.13.1            # via pytest
-pop-config==6.11          # via pop
+pop-config==8.0.0
 pop-loop==1.0.3           # via pop
 pop==20.0.0
 proxy-tools==0.1.0        # via pop

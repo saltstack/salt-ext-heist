@@ -41,7 +41,7 @@ def test_heist_salt_deploy(pop_hub):
                 artifact_version="",
                 roster=None,
                 roster_data=None,
-                roster_file="",
+                roster_file="/etc/heist/roster",
             )
         ]
 
