@@ -1,5 +1,6 @@
+lxml
 sphinx
-sphinx-material-saltstack
+furo
 sphinx-prompt
 sphinxcontrib-spelling
 importlib_metadata; python_version < "3.8"
