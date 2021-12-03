@@ -1,7 +1,7 @@
-saltext.salt_ext_heist package
+saltext.heist package
 ==============================
 
-.. automodule:: saltext.salt_ext_heist
+.. automodule:: saltext.heist
    :members:
    :undoc-members:
    :show-inheritance:
@@ -12,15 +12,15 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   saltext.salt_ext_heist.runners
+   saltext.heist.runners
 
 Submodules
 ----------
 
-saltext.salt_ext_heist.loader module
+saltext.heist.loader module
 ------------------------------------
 
-.. automodule:: saltext.salt_ext_heist.loader
+.. automodule:: saltext.heist.loader
    :members:
    :undoc-members:
    :show-inheritance:

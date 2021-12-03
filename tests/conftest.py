@@ -3,7 +3,7 @@
 import os
 
 import pytest
-from saltext.salt_ext_heist import PACKAGE_ROOT
+from saltext.heist import PACKAGE_ROOT
 from saltfactories.utils import random_string
 
 

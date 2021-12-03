@@ -5,7 +5,7 @@ Welcome to salt-ext-heist Documentation!
   :maxdepth: 2
   :caption: Contents:
 
-  ref/saltext.salt_ext_heist.rst
+  ref/saltext.heist.rst
   ref/modules.rst
 
 Indices and tables

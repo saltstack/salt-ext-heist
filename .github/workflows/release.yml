@@ -51,4 +51,4 @@ jobs:
       with:
         tag: ${{ steps.tag_version.outputs.new_tag }}
         name: Release ${{ steps.tag_version.outputs.new_tag }}
-        artifacts: dist/saltext.salt-ext-heist*.tar.gz
+        artifacts: dist/saltext.heist*.tar.gz

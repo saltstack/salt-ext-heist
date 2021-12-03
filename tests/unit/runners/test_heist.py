@@ -8,7 +8,7 @@ from unittest.mock import Mock
 from unittest.mock import patch
 
 import pytest
-import saltext.salt_ext_heist.runners.heist as heist
+import saltext.heist.runners.heist as heist
 
 pytest.importorskip("pop", reason="Test requires pop to be installed")
 pytest.importorskip("heist", reason="Test requires heist to be installed")
