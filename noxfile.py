@@ -82,7 +82,7 @@ def _install_requirements(
     install_coverage_requirements=True,
     install_test_requirements=True,
     install_source=False,
-    install_salt=True,
+    install_salt=False,
 ):
     if SKIP_REQUIREMENTS_INSTALL is False:
         # Always have the wheel package installed
