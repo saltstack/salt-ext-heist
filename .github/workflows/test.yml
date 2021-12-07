@@ -14,6 +14,7 @@ jobs:
         python-version: 3.6
     - name: Run pre-commit
       run: |
+        sudo apt-get install libxml2-dev libxslt-dev python-dev -y
         pip3 install pre-commit
         python3 -m pip install pre-commit
         pre-commit clean
