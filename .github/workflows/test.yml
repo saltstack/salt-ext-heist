@@ -11,7 +11,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v1
       with:
-        python-version: 3.6
+        python-version: 3.7
     - name: Run pre-commit
       run: |
         sudo apt-get install libxml2-dev libxslt-dev python-dev -y
@@ -60,9 +60,9 @@ jobs:
       max-parallel: 4
       matrix:
         python-version:
-          - 3.6
           - 3.7
           - 3.8
+          - 3.9
         salt-version:
           - 3002.6
 
@@ -180,8 +180,8 @@ jobs:
       max-parallel: 3
       matrix:
         python-version:
-          - 3.6
           - 3.7
+          - 3.8
         salt-version:
           - 3002.6
 
@@ -304,8 +304,8 @@ jobs:
       max-parallel: 3
       matrix:
         python-version:
-          - 3.6
           - 3.7
+          - 3.8
         salt-version:
           - 3002.6
 
