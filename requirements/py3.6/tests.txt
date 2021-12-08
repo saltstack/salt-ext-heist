@@ -23,8 +23,8 @@ dict-toolbox==2           # via acct, pop, pop-config, rend
 distlib==0.3.2            # via virtualenv
 distro==1.5.0             # via salt
 filelock==3.0.12          # via virtualenv
-heist-salt==5.0.0
-heist==6.0.0
+heist-salt==5.2.0
+heist==6.1.0
 idna-ssl==1.1.0           # via aiohttp
 idna==3.2                 # via idna-ssl, requests, yarl
 immutables==0.15          # via contextvars
