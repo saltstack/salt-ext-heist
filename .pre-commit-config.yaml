@@ -140,6 +140,7 @@ repos:
           - -v
           - --py-version=3.6
           - --platform=linux
+          - --build-isolation
           - --include=requirements/base.txt
           - requirements/tests.in
 
@@ -152,6 +153,7 @@ repos:
           - -v
           - --py-version=3.7
           - --platform=linux
+          - --build-isolation
           - --include=requirements/base.txt
           - requirements/tests.in
 
@@ -164,6 +166,7 @@ repos:
           - -v
           - --py-version=3.8
           - --platform=linux
+          - --build-isolation
           - --include=requirements/base.txt
           - requirements/tests.in
 
@@ -176,6 +179,7 @@ repos:
           - -v
           - --py-version=3.9
           - --platform=linux
+          - --build-isolation
           - --include=requirements/base.txt
           - requirements/tests.in
   # <---- Static Test Requirements ---------------------------------------------------------------
@@ -190,6 +194,7 @@ repos:
           - -v
           - --py-version=3.5
           - --platform=linux
+          - --build-isolation
           - requirements/lint.in
 
       - id: pip-tools-compile
@@ -201,6 +206,7 @@ repos:
           - -v
           - --py-version=3.6
           - --platform=linux
+          - --build-isolation
           - requirements/lint.in
 
       - id: pip-tools-compile
@@ -212,6 +218,7 @@ repos:
           - -v
           - --py-version=3.7
           - --platform=linux
+          - --build-isolation
           - requirements/lint.in
 
       - id: pip-tools-compile
@@ -223,6 +230,7 @@ repos:
           - -v
           - --py-version=3.8
           - --platform=linux
+          - --build-isolation
           - requirements/lint.in
 
       - id: pip-tools-compile
@@ -234,6 +242,7 @@ repos:
           - -v
           - --py-version=3.9
           - --platform=linux
+          - --build-isolation
           - requirements/lint.in
   # <---- Static Lint Requirements ---------------------------------------------------------------
 
@@ -247,6 +256,7 @@ repos:
           - -v
           - --py-version=3.5
           - --platform=linux
+          - --build-isolation
           - requirements/docs.in
 
       - id: pip-tools-compile
@@ -258,6 +268,7 @@ repos:
           - -v
           - --py-version=3.6
           - --platform=linux
+          - --build-isolation
           - requirements/docs.in
 
       - id: pip-tools-compile
@@ -269,6 +280,7 @@ repos:
           - -v
           - --py-version=3.7
           - --platform=linux
+          - --build-isolation
           - requirements/docs.in
 
       - id: pip-tools-compile
@@ -280,6 +292,7 @@ repos:
           - -v
           - --py-version=3.8
           - --platform=linux
+          - --build-isolation
           - requirements/docs.in
 
       - id: pip-tools-compile
@@ -291,5 +304,6 @@ repos:
           - -v
           - --py-version=3.9
           - --platform=linux
+          - --build-isolation
           - requirements/docs.in
   # <---- Static Docs Requirements ---------------------------------------------------------------

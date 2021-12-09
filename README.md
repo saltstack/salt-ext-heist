@@ -73,6 +73,21 @@ For more information, build the docs and head over to http://localhost:8000/ —
 that's where you'll find the rest of the documentation.
 
 
+## How to use the Heist Salt Extension
+
+    # Distribute the Salt artifact to the target
+    salt-run heist.deploy salt.minion
+
+This starts up the Heist-Salt process, copies the artifact and initiates
+the SSH tunnel between the Master and Minion. Once you run this command
+you can interact with the Heist Minions. If you run `salt-key` you will
+see the new key for the host you targeted and you can run Salt commands
+for the new minion.
+
+You can read the [Heist][heist] or [Heist Salt][heist-salt]
+docs to learn more about the projects.
+
+
 [security]: https://github.com/saltstack/salt/blob/master/SECURITY.md
 [salt-contributing]: https://docs.saltproject.io/en/master/topics/development/contributing.html
 [issues]: https://github.com/saltstack/salt-ext-heist/issues
@@ -80,3 +95,5 @@ that's where you'll find the rest of the documentation.
 [discussions]: https://github.com/saltstack/salt-ext-heist/discussions
 [comments]: https://conventionalcomments.org/
 [cla-faq]: https://cla.vmware.com/faq
+[heist]: https://heist.readthedocs.io/en/latest/
+[heist-salt]: https://heist-salt.readthedocs.io/en/latest/

@@ -1,7 +1,7 @@
-saltext.salt_ext_heist.runners package
+saltext.heist.runners package
 =======================================
 
-.. automodule:: saltext.salt_ext_heist.runners
+.. automodule:: saltext.heist.runners
    :members:
    :undoc-members:
    :show-inheritance:
@@ -9,18 +9,18 @@ saltext.salt_ext_heist.runners package
 Submodules
 ----------
 
-saltext.salt_ext_heist.runners.heist module
+saltext.heist.runners.heist module
 -------------------------------------------
 
-.. automodule:: saltext.salt_ext_heist.runners.heist
+.. automodule:: saltext.heist.runners.heist
    :members:
    :undoc-members:
    :show-inheritance:
 
-saltext.salt_ext_heist.runners.heist_salt module
+saltext.heist.runners.heist_salt module
 ------------------------------------------------
 
-.. automodule:: saltext.salt_ext_heist.runners.heist_salt
+.. automodule:: saltext.heist.runners.heist_salt
    :members:
    :undoc-members:
    :show-inheritance:

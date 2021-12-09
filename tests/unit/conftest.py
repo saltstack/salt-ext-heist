@@ -1,7 +1,7 @@
 # Copyright 2021 VMware, Inc.
 # SPDX-License: Apache-2
 import pytest
-import saltext.salt_ext_heist.runners.heist as heist
+import saltext.heist.runners.heist as heist
 
 
 @pytest.fixture()
