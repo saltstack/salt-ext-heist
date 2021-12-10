@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: dev-drprasad/delete-tag-and-release@v0.2.0
-      if: github.event.inputs.reTag == 'true'
+      if: github.event.inputs.reTag == 'true' && contains('["ch3ll"]', github.actor)
       with:
         delete_release: true # default: false
         tag_name: v${{ github.event.inputs.release_version }}
@@ -47,8 +47,14 @@ jobs:
       run: |
         python -m build --sdist --outdir dist/ .
     - name: Create a GitHub release
+      if: contains('["ch3ll"]', github.actor)
       uses: ncipollo/release-action@v1
       with:
         tag: ${{ steps.tag_version.outputs.new_tag }}
         name: Release ${{ steps.tag_version.outputs.new_tag }}
         artifacts: dist/saltext.heist*.tar.gz
+    - name: Publish distribution 📦 to PyPI
+      if: contains('["ch3ll"]', github.actor)
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        password: ${{ secrets.PYPI_API_TOKEN }}

@@ -17,8 +17,7 @@ jobs:
         sudo apt-get install libxml2-dev libxslt-dev python-dev -y
         pip3 install pre-commit
         python3 -m pip install pre-commit
-        pre-commit clean
-        pip install --progress-bar=off -r requirements/py3.7/tests.txt
+        #pre-commit clean
         pre-commit run --color always --show-diff-on-failure -a -v
 
   Docs:
