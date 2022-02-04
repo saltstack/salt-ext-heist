@@ -14,7 +14,7 @@ furo==2021.11.23
 idna==3.2                 # via requests
 imagesize==1.2.0          # via sphinx
 jinja2==3.0.1             # via sphinx
-lxml==4.6.4
+lxml==4.6.5
 markupsafe==2.0.1         # via jinja2
 packaging==21.0           # via sphinx
 pyenchant==3.2.1          # via sphinxcontrib-spelling
