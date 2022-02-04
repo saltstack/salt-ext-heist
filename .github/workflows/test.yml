@@ -6,17 +6,21 @@ on: [push, pull_request]
 jobs:
   Pre-Commit:
     runs-on: ubuntu-latest
+    container:
+      image: python:3.8.6-slim-buster
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.7
-    - name: Run pre-commit
+    - name: Install Depdendencies
       run: |
-        sudo apt-get install libxml2-dev libxslt-dev python-dev -y
-        pip3 install pre-commit
-        python3 -m pip install pre-commit
+        echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/sources.list
+        apt-get update
+        apt-get install -y enchant git gcc make zlib1g-dev libc-dev libffi-dev g++ libxml2 libxml2-dev libxslt-dev libcurl4-openssl-dev libssl-dev libgnutls28-dev
+        apt-get install -y git/buster-backports
+        pip install pre-commit
+
+    - uses: actions/checkout@v2
+
+    - name: Run Pre-Commit
+      run: |
         #pre-commit clean
         pre-commit run --color always --show-diff-on-failure -a -v
 
