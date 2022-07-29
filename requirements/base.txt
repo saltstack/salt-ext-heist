@@ -2,4 +2,4 @@ heist>=v6.0.0
 heist-salt>=v5.0.0
 pop
 pop-config>=8.0.0
-salt>=3002.6
+salt

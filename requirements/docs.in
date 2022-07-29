@@ -1,4 +1,4 @@
-lxml
+lxml>=4.9.1
 sphinx
 furo
 sphinx-prompt
