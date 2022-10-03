@@ -136,19 +136,6 @@ repos:
     rev: "4.4"
     hooks:
       - id: pip-tools-compile
-        alias: compile-3.6-test-requirements
-        name: Py3.6 Test Requirements
-        files: ^requirements/(base.txt|tests.in)$
-        pass_filenames: false
-        args:
-          - -v
-          - --py-version=3.6
-          - --platform=linux
-          - --build-isolation
-          - --include=requirements/base.txt
-          - requirements/tests.in
-
-      - id: pip-tools-compile
         alias: compile-3.7-test-requirements
         name: Py3.7 Test Requirements
         files: ^requirements/(base.txt|tests.in)$
@@ -241,12 +228,12 @@ repos:
   # ----- Static Docs Requirements -------------------------------------------------------------->
       - id: pip-tools-compile
         alias: compile-3.6-test-requirements
-        name: Py3.6 Docs Requirements
+        name: Py3.7 Docs Requirements
         files: ^requirements/docs.in$
         pass_filenames: false
         args:
           - -v
-          - --py-version=3.6
+          - --py-version=3.7
           - --platform=linux
           - --build-isolation
           - requirements/docs.in

@@ -68,7 +68,8 @@ jobs:
           - 3.8
           - 3.9
         salt-version:
-          - 3002.6
+          - 3004.2
+          - 3005
 
     steps:
     - uses: actions/checkout@v2
