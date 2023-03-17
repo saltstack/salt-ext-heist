@@ -25,7 +25,7 @@ attrs==21.2.0
     #   pytest-salt-factories
 backports.entry-points-selectable==1.1.0
     # via virtualenv
-certifi==2021.5.30
+certifi==2022.12.7
     # via requests
 cffi==1.14.6
     # via cryptography
@@ -39,7 +39,7 @@ colored==1.4.2
     # via rend
 contextvars==2.4
     # via salt
-cryptography==3.4.7
+cryptography==39.0.2
     # via
     #   acct
     #   asyncssh
@@ -53,6 +53,8 @@ distlib==0.3.2
     # via virtualenv
 distro==1.5.0
     # via salt
+exceptiongroup==1.1.1
+    # via pytest
 filelock==3.4.0
     # via virtualenv
 heist-salt==5.2.0
@@ -122,8 +124,6 @@ psutil==5.8.0
     # via
     #   pytest-salt-factories
     #   salt
-py==1.10.0
-    # via pytest
 pycparser==2.20
     # via cffi
 pycryptodomex==3.10.1
@@ -136,7 +136,7 @@ pytest-salt-factories==0.906.0
     # via -r requirements/tests.in
 pytest-tempdir==2019.10.12
     # via pytest-salt-factories
-pytest==6.2.4
+pytest==7.2.2
     # via
     #   -r requirements/tests.in
     #   pytest-helpers-namespace
@@ -170,9 +170,9 @@ six==1.16.0
 sniffio==1.2.0
     # via pop-loop
 toml==0.10.2
-    # via
-    #   pytest
-    #   rend
+    # via rend
+tomli==2.0.1
+    # via pytest
 typing-extensions==3.10.0.0
     # via
     #   aiohttp
