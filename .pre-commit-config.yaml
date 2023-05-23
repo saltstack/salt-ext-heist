@@ -177,18 +177,6 @@ repos:
 
   # ----- Static Lint Requirements -------------------------------------------------------------->
       - id: pip-tools-compile
-        alias: compile-3.6-test-requirements
-        name: Py3.6 Lint Requirements
-        files: ^requirements/lint.in$
-        pass_filenames: false
-        args:
-          - -v
-          - --py-version=3.6
-          - --platform=linux
-          - --build-isolation
-          - requirements/lint.in
-
-      - id: pip-tools-compile
         alias: compile-3.7-test-requirements
         name: Py3.7 Lint Requirements
         files: ^requirements/lint.in$
@@ -226,18 +214,6 @@ repos:
   # <---- Static Lint Requirements ---------------------------------------------------------------
 
   # ----- Static Docs Requirements -------------------------------------------------------------->
-      - id: pip-tools-compile
-        alias: compile-3.6-test-requirements
-        name: Py3.7 Docs Requirements
-        files: ^requirements/docs.in$
-        pass_filenames: false
-        args:
-          - -v
-          - --py-version=3.7
-          - --platform=linux
-          - --build-isolation
-          - requirements/docs.in
-
       - id: pip-tools-compile
         alias: compile-3.7-test-requirements
         name: Py3.7 Docs Requirements

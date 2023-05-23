@@ -4,3 +4,4 @@ furo
 sphinx-prompt
 sphinxcontrib-spelling
 importlib_metadata; python_version < "3.8"
+requests>=2.31.0
