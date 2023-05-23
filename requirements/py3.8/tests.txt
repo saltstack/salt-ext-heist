@@ -153,8 +153,10 @@ rend==6.2.0
     # via
     #   acct
     #   heist
-requests==2.26.0
-    # via salt
+requests==2.31.0
+    # via
+    #   -r requirements/tests.in
+    #   salt
 salt==3004.2
     # via
     #   -r requirements/base.txt

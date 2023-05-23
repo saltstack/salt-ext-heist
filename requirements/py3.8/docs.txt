@@ -41,8 +41,10 @@ pyparsing==2.4.7
     # via packaging
 pytz==2021.1
     # via babel
-requests==2.26.0
-    # via sphinx
+requests==2.31.0
+    # via
+    #   -r requirements/docs.in
+    #   sphinx
 snowballstemmer==2.1.0
     # via sphinx
 soupsieve==2.2.1
