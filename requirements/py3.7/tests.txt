@@ -39,8 +39,9 @@ colored==1.4.2
     # via rend
 contextvars==2.4
     # via salt
-cryptography==39.0.2
+cryptography==41.0.1
     # via
+    #   -r requirements/tests.in
     #   acct
     #   asyncssh
 dict-toolbox==2
