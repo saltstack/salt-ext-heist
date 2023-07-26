@@ -173,6 +173,20 @@ repos:
           - --build-isolation
           - --include=requirements/base.txt
           - requirements/tests.in
+
+      - id: pip-tools-compile
+        alias: compile-3.10-test-requirements
+        name: Py3.10-Test Requirements
+        files: ^requirements/(base.txt|tests.in)$
+        pass_filenames: false
+        args:
+          - -v
+          - --py-version=3.10
+          - --platform=linux
+          - --build-isolation
+          - --include=requirements/base.txt
+          - requirements/tests.in
+
   # <---- Static Test Requirements ---------------------------------------------------------------
 
   # ----- Static Lint Requirements -------------------------------------------------------------->
@@ -211,6 +225,19 @@ repos:
           - --platform=linux
           - --build-isolation
           - requirements/lint.in
+
+      - id: pip-tools-compile
+        alias: compile-3.10-test-requirements
+        name: Py3.10 Lint Requirements
+        files: ^requirements/lint.in$
+        pass_filenames: false
+        args:
+          - -v
+          - --py-version=3.10
+          - --platform=linux
+          - --build-isolation
+          - requirements/lint.in
+
   # <---- Static Lint Requirements ---------------------------------------------------------------
 
   # ----- Static Docs Requirements -------------------------------------------------------------->
@@ -246,6 +273,18 @@ repos:
         args:
           - -v
           - --py-version=3.9
+          - --platform=linux
+          - --build-isolation
+          - requirements/docs.in
+
+      - id: pip-tools-compile
+        alias: compile-3.10-test-requirements
+        name: Py3.10 Docs Requirements
+        files: ^requirements/docs.in$
+        pass_filenames: false
+        args:
+          - -v
+          - --py-version=3.10
           - --platform=linux
           - --build-isolation
           - requirements/docs.in

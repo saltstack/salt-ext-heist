@@ -115,6 +115,7 @@ def _install_requirements(
             install_command += [req.strip() for req in EXTRA_REQUIREMENTS_INSTALL.split()]
             session.install(*install_command, silent=PIP_INSTALL_SILENT)
 
+        session.install("setuptools")
         if passed_requirements:
             session.install(*passed_requirements)
         if install_source:
