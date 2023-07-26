@@ -7,14 +7,13 @@ jobs:
   Pre-Commit:
     runs-on: ubuntu-latest
     container:
-      image: python:3.8.6-slim-buster
+      image: ghcr.io/saltstack/salt-ci-containers/python:3.8
     steps:
     - name: Install Depdendencies
       run: |
-        echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/sources.list
+        echo "deb http://deb.debian.org/debian bookworm-backports main" >> /etc/apt/sources.list
         apt-get update
-        apt-get install -y enchant git gcc make zlib1g-dev libc-dev libffi-dev g++ libxml2 libxml2-dev libxslt-dev libcurl4-openssl-dev libssl-dev libgnutls28-dev
-        apt-get install -y git/buster-backports
+        apt-get install -y enchant-2 git gcc make zlib1g-dev libc-dev libffi-dev g++ libxml2 libxml2-dev libxslt-dev libcurl4-openssl-dev libssl-dev libgnutls28-dev
         pip install pre-commit
 
     - uses: actions/checkout@v2
@@ -22,6 +21,7 @@ jobs:
     - name: Run Pre-Commit
       run: |
         #pre-commit clean
+        git config --global --add safe.directory $(pwd)
         pre-commit run --color always --show-diff-on-failure -a -v
 
   Docs:

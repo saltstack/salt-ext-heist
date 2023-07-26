@@ -1,5 +1,6 @@
-heist>=v6.0.0
-heist-salt>=v5.0.0
+# Temprorary workaround until aiohttp update is released in heist-salt
+git+https://gitlab.com/saltstack/pop/heist.git@master#egg=heist
+git+https://gitlab.com/saltstack/pop/heist-salt.git@master#egg=heist-salt
 pop
 pop-config>=8.0.0
 salt
