@@ -38,7 +38,7 @@ colorama==0.4.6
     # via rend
 contextvars==2.4
     # via salt
-cryptography==41.0.2
+cryptography==41.0.3
     # via
     #   -r requirements/tests.in
     #   asyncssh
