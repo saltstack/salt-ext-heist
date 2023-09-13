@@ -51,7 +51,7 @@ dict-toolbox==4.1.1
     #   rend
 distlib==0.3.7
     # via virtualenv
-distro==1.5.0
+distro==1.8.0
     # via salt
 exceptiongroup==1.1.1
     # via pytest
@@ -71,7 +71,7 @@ idna==3.2
     # via
     #   requests
     #   yarl
-immutables==0.15
+immutables==0.20
     # via contextvars
 iniconfig==1.1.1
     # via pytest
@@ -79,8 +79,12 @@ jinja2==3.0.1
     # via
     #   rend
     #   salt
+jmespath==1.0.1
+    # via salt
 lazy-object-proxy==1.9.0
     # via pop
+looseversion==1.3.0
+    # via salt
 markupsafe==2.0.1
     # via
     #   jinja2
@@ -96,10 +100,12 @@ multidict==5.1.0
     #   yarl
 nest-asyncio==1.5.1
     # via pop-loop
-packaging==21.0
+packaging==23.1
     # via
+    #   -r requirements/tests.in
     #   heist-salt
     #   pytest
+    #   salt
 platformdirs==2.0.2
     # via virtualenv
 pluggy==0.13.1
@@ -126,10 +132,8 @@ psutil==5.8.0
     #   salt
 pycparser==2.20
     # via cffi
-pycryptodomex==3.10.1
+pycryptodomex==3.18.0
     # via salt
-pyparsing==2.4.7
-    # via packaging
 pytest-helpers-namespace==2021.4.29
     # via pytest-salt-factories
 pytest-salt-factories==0.906.0
@@ -162,7 +166,7 @@ requests==2.31.0
     # via
     #   -r requirements/tests.in
     #   salt
-salt==3004.2
+salt==3006.3
     # via -r requirements/base.txt
 six==1.16.0
     # via virtualenv
