@@ -1,6 +1,6 @@
 pytest >= 7.2.0
 pytest-salt-factories >= 0.130.0
 requests>=2.31.0
-cryptography>=41.0.3
+cryptography>=41.0.4
 aiohttp>=3.8.5
 packaging>=21.3
