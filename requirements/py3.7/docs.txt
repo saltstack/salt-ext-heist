@@ -77,7 +77,7 @@ sphinxcontrib-spelling==7.2.1
     # via -r requirements/docs.in
 typing-extensions==3.10.0.0
     # via importlib-metadata
-urllib3==1.26.6
+urllib3==1.26.17
     # via requests
 zipp==3.5.0
     # via importlib-metadata

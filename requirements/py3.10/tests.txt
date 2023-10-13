@@ -132,7 +132,7 @@ psutil==5.9.5
     #   salt
 pycparser==2.21
     # via cffi
-pycryptodomex==3.18.0
+pycryptodomex==3.19.0
     # via salt
 pytest-helpers-namespace==2021.12.29
     # via pytest-salt-factories
@@ -179,7 +179,7 @@ tomli==2.0.1
     # via pytest
 typing-extensions==4.7.1
     # via asyncssh
-urllib3==2.0.4
+urllib3==2.0.6
     # via requests
 virtualenv==20.24.2
     # via pytest-salt-factories
